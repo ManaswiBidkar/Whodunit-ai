@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b12;
+  color: #f5f5f5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  text-align: center;
+  color: #facc15;
+  letter-spacing: 5px;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.case-header {
+  background: #171722;
+  border: 1px solid #343444;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.case-label {
+  color: #f87171;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.case-header h2 {
+  font-size: 30px;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+.victim {
+  color: #c4c4d4;
+  font-size: 17px;
+}
+
+.suspects-heading {
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+.suspects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.suspect-card {
+  background: #171722;
+  border: 1px solid #343444;
+  border-radius: 14px;
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.suspect-card:hover {
+  transform: translateY(-5px);
+  border-color: #facc15;
+}
+
+.suspect-number {
+  color: #f87171;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.suspect-card h3 {
+  color: #facc15;
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.alibi-label {
+  color: #9ca3af;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.alibi {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.error {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.error h2 {
+  color: #f87171;
+}
+
+@media (max-width: 800px) {
+  .suspects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .suspects {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .case-header h2 {
+    font-size: 23px;
+  }
+}
